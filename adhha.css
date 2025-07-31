@@ -1,0 +1,78 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #ffb6c1, #ff69b4);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    max-width: 400px;
+    animation: fadeIn 1.2s ease-in-out;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.heart {
+    font-size: 2.5rem;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #fff;
+    color: #ff69b4;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #ffe4ec;
+}
+
+/* Sakura Petals */
+.petal {
+    position: fixed;
+    top: -10px;
+    background: pink;
+    border-radius: 150% 0 150% 0;
+    transform: rotate(45deg);
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 1;
+}
